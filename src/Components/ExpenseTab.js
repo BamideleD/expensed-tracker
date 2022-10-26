@@ -1,15 +1,12 @@
 import React from "react";
+import ExpenseItem from "./ExpenseItem";
 import styles from "./ExpenseTab.module.css"
 
 
 const ExpenseTab = () => {
     return (
         <div className={styles.expenseTab}>
-            <ul className={styles[`expenseTab-items`]}>
-                <div> Date </div>
-                <div> Item </div>
-                <div> Amount </div>
-            </ul>
+            <ExpenseItem />
         </div>
     )
 }

@@ -1,0 +1,19 @@
+.expenseItem{
+    display: flex;
+    justify-content: flex-start;
+    color: white;
+    background-color: rgb(178, 178, 247);
+    margin:20px;
+    border-radius: 3px;
+}
+
+
+
+
+.expenseItem-Item{
+    margin-left:10px;
+}
+
+.expenseItem-Amount{
+    margin-left: auto;
+}
