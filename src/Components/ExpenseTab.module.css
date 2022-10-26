@@ -1,0 +1,9 @@
+.expenseTab{
+    margin: 30px;
+    background-color: rgb(66, 64, 64);
+    
+}
+
+.expenseTab-items{
+    color: white;
+}
