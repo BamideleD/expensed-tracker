@@ -16,8 +16,12 @@
 
 .expenseItem-Item{
     margin-left:10px;
+    display: flex;
+    align-items: center;
 }
 
 .expenseItem-Amount{
     margin-left: auto;
+    display: flex;
+    align-items: center;
 }
