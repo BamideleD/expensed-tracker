@@ -2,9 +2,13 @@
     display: flex;
     justify-content: flex-start;
     color: white;
-    background-color: rgb(178, 178, 247);
+    background-color:rgba(128, 128, 128, 0.503);
     margin:20px;
     border-radius: 3px;
+    padding: 10px;
+    
+    
+    
 }
 
 

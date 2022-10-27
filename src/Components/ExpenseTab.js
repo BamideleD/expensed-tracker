@@ -7,6 +7,8 @@ const ExpenseTab = () => {
     return (
         <div className={styles.expenseTab}>
             <ExpenseItem />
+            <ExpenseItem />
+            <ExpenseItem />
         </div>
     )
 }
