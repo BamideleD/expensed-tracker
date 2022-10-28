@@ -1,6 +1,7 @@
 import React from "react";
-import styles from './App.module.css'
-import ExpenseTab from './Components/ExpenseTab'
+import styles from './App.module.css';
+import ExpenseTab from './Components/ExpenseTab';
+
 
 
 const App = () => {
