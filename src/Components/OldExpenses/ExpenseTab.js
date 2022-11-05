@@ -26,13 +26,22 @@ const expense = [
     }
 ]
 
+// const mapExpense = expense.map((obj) => {
+//     return (
+//         {
+//             obj
+//         }
+//     )
+// })
 
 const ExpenseTab = () => {
     return (
         <div className={styles.expenseTab}>
-            <ExpenseItem id = {expense[0].id} item = {expense[0].item} amount = {expense[0].amount} date = {expense[0].date} />
-            <ExpenseItem id = {expense[1].id} item = {expense[1].item} amount = {expense[1].amount} date = {expense[1].date} />
-            <ExpenseItem id = {expense[2].id} item = {expense[2].item} amount = {expense[2].amount} date = {expense[2].date} />
+            {expense.map((e) => {
+                return(
+                    <ExpenseItem id = {e.id} item = {e.item} amount = {e.amount} date = {e.date} key = {e.id}/>
+                )
+            })}
         </div>
     )
 }
