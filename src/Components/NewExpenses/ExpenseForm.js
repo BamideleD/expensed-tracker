@@ -11,7 +11,7 @@ const ExpenseForm = (props) => {
 
     return (
         <div className={styles.content}>
-            <form onSubmit={props.newExpense} className={styles.form}>
+            <form className={styles.form}>
                 <div className={styles.formelements}>
                     <div className={styles.ontope}>
                         <label> Title </label>
@@ -28,7 +28,7 @@ const ExpenseForm = (props) => {
                         <input type = 'date' min = '2020-01-01' max = '2023-12-31' value={props.date} onChange = {props.submitDate} />
                     </div>
                 </div>
-                <input className={styles.button} type = 'submit' value = 'Add expense' />
+                <button className={styles.button} type = 'submit' onClick={props.newExpense}> Add Expense </button> 
             </form>
         </div>
     )

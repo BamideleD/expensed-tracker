@@ -14,6 +14,7 @@ const App = () => {
 
 
 
+
     
 
     const submitTitle = (event) => {
@@ -31,18 +32,58 @@ const App = () => {
 
         setDate(event.target.value)
     }
-
-
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        console.log({
-            key: Math.random().toString(),
-            item: title,
-            amount: amount,
-            date: date
-        })
-        
+    
+    const eggShell = {
+        id: Math.random().toString(),
+        item: title,
+        amount: amount,
+        date: date,
     }
+
+    
+
+    
+
+
+    
+const expense = [
+    {
+        id: 1,
+        item: "Phone",
+        amount: 1000,
+        date: new Date(2021, 6, 31)
+    
+    },
+    {
+        id: 2,
+        item: "Car",
+        amount: 9000,
+        date: new Date(2021, 11, 20)
+    
+    },
+    {
+        id: 3,
+        item: "Clothes",
+        amount: 800,
+        date: new Date(2020, 1, 14)
+    
+    }
+
+
+
+]
+
+
+const [fullexpense, setFullExpense]= useState(expense)
+
+const handleSubmit = (event) => {
+    event.preventDefault();
+    setFullExpense([...expense, eggShell])
+}
+
+
+
+
 
     return (
         <div className= {styles.body}>
@@ -54,7 +95,9 @@ const App = () => {
                         submitTitle = {submitTitle} 
                         submitAmount = {submitAmount} 
                         submitDate ={submitDate} />
-            <ExpenseTab />
+            <ExpenseTab 
+                        newExpensed = {fullexpense}
+                        />
         </div>
     )
 }

@@ -6,9 +6,12 @@ import styles from './ExpenseItem.module.css';
 const ExpenseItem = (props) => {
     const date = props.date
 
-    let month = date.toLocaleDateString('en-us', {month: 'short'})
-    let year = date.toLocaleDateString('en-us', {year: 'numeric'})
-    let day = date.toLocaleDateString('en-us', {day: 'numeric'})
+    let month = date?.toLocaleString('en-us', {month: 'short'}) || '';
+    let year = date?.toLocaleString('en-us', {year: 'numeric'}) || '';
+    let day = date?.toLocaleString('en-us', {day: 'numeric'}) || '';
+
+    
+    
 
     
     return(

@@ -2,11 +2,7 @@
     padding: 10px
 }
 
-.form {
-    /* display: flex;
-    justify-content: space-evenly; */
 
-}
 
 .formelements {
     display: flex;
@@ -35,7 +31,10 @@ input {
     height: 40px;
     color: white;
     justify-content: center;
+    align-items: center;
     background-color: rgba(165, 125, 23, 0.774);
+    border: 0px;
+    border-radius: 5px;
     
 }
 
