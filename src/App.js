@@ -31,14 +31,19 @@ const App = () => {
     const submitDate = (event) => {
 
         setDate(event.target.value)
+
+
+        
     }
     
     const eggShell = {
-        id: Math.random().toString(),
+        id: Math.random(),
         item: title,
         amount: amount,
-        date: date,
+        date: new Date(date)
     }
+    
+  
 
     
 
@@ -74,13 +79,23 @@ const expense = [
 ]
 
 
+
 const [fullexpense, setFullExpense]= useState(expense)
 
 const handleSubmit = (event) => {
     event.preventDefault();
-    setFullExpense([...expense, eggShell])
+
+    if (eggShell.item.length === 0){
+        return ({})
+    }
+    
+    else setFullExpense([...fullexpense, eggShell])
+
 }
 
+
+
+console.log(fullexpense);
 
 
 
