@@ -7,3 +7,45 @@
     
 }
 
+@media screen and (max-width: 900px){
+    .expenseTab{
+    
+        width: 90%;
+        margin: 1px;
+        border-radius: 10px;
+        background-color: rgb(26, 25, 25);
+        padding: 1px;
+
+        
+    }
+
+}
+
+@media screen and (max-width: 370px){
+    .expenseTab{
+    
+        width: 90%;
+        margin: 1px;
+        border-radius: 10px;
+        background-color: rgb(26, 25, 25);
+        padding: 1px;
+
+        
+    }
+
+}
+
+@media screen and (max-width: 280px){
+    .expenseTab{
+    
+        width: 115%;
+        margin: 1px;
+        border-radius: 10px;
+        background-color: rgb(26, 25, 25);
+        padding: 1px;
+
+        
+    }
+
+}
+

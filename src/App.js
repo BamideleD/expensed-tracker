@@ -8,6 +8,8 @@ import ExpenseInputTab from "./Components/NewExpenses/ExpenseInputTab";
 
 const App = () => {
 
+    
+
     const [title, setTitle]= useState("")
     const [amount, setAmount]= useState("")
     const [date, setDate]= useState("")

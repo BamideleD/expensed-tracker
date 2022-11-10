@@ -19,7 +19,9 @@
     display: flex;
     align-items: center;
     font-size: larger;
-    font-weight: bolder
+    font-weight: bolder;
+    
+  
 }
 
 .expenseItem-Amount{
@@ -37,5 +39,9 @@
     margin-right: 5px;
     margin-top: 25px;
     margin-bottom: 20px;
+    overflow: hidden;
+    white-space: nowrap;
+    
+    
     
 }
