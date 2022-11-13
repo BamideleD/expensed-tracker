@@ -1,0 +1,13 @@
+.addExpense{
+    display: flex;
+    justify-content: center;
+    margin: 10px 
+}
+
+.button{
+    border-color: transparent;
+    border-radius: 5px;
+    color: white;
+    background-color:  rgba(165, 125, 23, 0.774);
+    padding: 5px;
+}
