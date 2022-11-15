@@ -1,0 +1,27 @@
+.ChartBarOver{
+    
+    display: inline-flex;
+    flex-direction: column;
+    
+   
+}
+
+.ChartBar{
+    display: inline-flex;
+    margin-top: 10px;
+    width: 15px;
+    height: 130px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.44); 
+    background-color: rgb(255, 219, 165);
+    margin: 22px;
+    margin-bottom: 5px;
+
+    
+}
+
+.month{
+    display: flex;
+    justify-content: center;
+}
+

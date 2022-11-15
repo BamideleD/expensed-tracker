@@ -97,7 +97,7 @@ const handleSubmit = (event) => {
 
 
 
-console.log(fullexpense);
+
 
 
 
