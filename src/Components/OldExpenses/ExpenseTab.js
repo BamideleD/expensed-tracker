@@ -12,16 +12,28 @@ const ExpenseTab = (props) => {
    const fullexpense = props.newExpensed
 
 
-   const dataPoints = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+   const dataPoints = [ {month: 'Jan', key: 1},
+                        {month: 'Feb', key: 2},
+                        {month: 'Mar', key: 3},
+                        {month: 'Apr', key: 4},
+                        {month: 'May', key: 5},
+                        {month: 'Jun', key: 6},
+                        {month: 'Jul', key: 7},
+                        {month: 'Aug', key: 8},
+                        {month: 'Sep', key: 9},
+                        {month: 'Oct', key: 10},
+                        {month: 'Nov', key: 11},
+                        {month: 'Dec', key: 12},
+                           ]
     
     
     
-    
+
     
     return (
         <div className={styles.expenseTab}>
 
-            <Chart dataPoints = {dataPoints}/>
+            <Chart dataPoints = {dataPoints} key = {'i'} date = {props.date} />
 
             {fullexpense.map((e) => {
                 return(

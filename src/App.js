@@ -114,6 +114,7 @@ const handleSubmit = (event) => {
                         submitDate ={submitDate} />
             <ExpenseTab 
                         newExpensed = {fullexpense}
+                        date = {date}
                         />
         </div>
     )

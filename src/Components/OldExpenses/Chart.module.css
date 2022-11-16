@@ -3,4 +3,24 @@
     background-color: rgb(255, 236, 208);
     margin: 20px;
     border-radius: 5px;
+    margin-top: 20px;
+}
+
+.filter{
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.text {
+    color: white;
+    font-size: 20px;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+
+.option{
+    padding: 10px 40px;
+    font-weight: bolder;
 }
