@@ -37,9 +37,9 @@ const ExpenseTab = (props) => {
 
             {fullexpense.map((e) => {
                 return(
-                    <div>
+                
                         <ExpenseItem id = {e.id} item = {e.item} amount = {e.amount} date = {e.date} key = {e.id}/>
-                    </div>
+                    
                 )
             })}
         </div>
