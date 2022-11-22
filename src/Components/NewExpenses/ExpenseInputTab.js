@@ -41,18 +41,25 @@ const ExpenseInputTab = (props) => {
     
 
 
-    else {
-        <div>
-                <ExpenseForm  
-                                        newExpense = {props.newExpense}
-                                        title = {props.title}
-                                        amount = {props.amount}
-                                        date = {props.date}
-                                        submitTitle = {props.submitTitle} 
-                                        submitAmount = {props.submitAmount} 
-                                        submitDate ={props.submitDate} />
+    if (buttonClick === false){
+
+        return(
+            <div className={styles.expenseInputTab}>
+            <ExpenseForm  
+                        newExpense = {props.newExpense}
+                        title = {props.title}
+                        amount = {props.amount}
+                        date = {props.date}
+                        submitTitle = {props.submitTitle} 
+                        submitAmount = {props.submitAmount} 
+                        submitDate ={props.submitDate} />
             </div>
+        )
+                
     }
+    
+        
+    
 }
 
 
