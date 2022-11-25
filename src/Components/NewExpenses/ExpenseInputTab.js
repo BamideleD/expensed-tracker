@@ -7,39 +7,60 @@ import AddExpense from "./AddExpense";
 
 const ExpenseInputTab = (props) => {
 
+
+    
+    const [buttonClick, setButtonClick]= useState(true)
     
 
-    const buttonPress = (props) => {
-        setButtonClick(<ExpenseForm  
-                                        newExpense = {props.newExpense}
-                                        title = {props.title}
-                                        amount = {props.amount}
-                                        date = {props.date}
-                                        submitTitle = {props.submitTitle} 
-                                        submitAmount = {props.submitAmount} 
-                                        submitDate ={props.submitDate} />)
+    const buttonPress = () => {
+        
+
+        setButtonClick(false)
+
+    
     }
-
-
-    const [buttonClick, setButtonClick]= useState(<AddExpense selectButton = {buttonPress}/>)
+    
 
     
 
+    
+   if (buttonClick === true) {
+    
     
     return (
-        <div className={styles.expenseInputTab}> {buttonClick} </div>
+        <div className={styles.expenseInputTab}>
+            
+            
+            <div>
+                <AddExpense selectButton = {buttonPress}/>
+            </div>
+            
+        </div>
     )
+   }
+    
+
+
+    if (buttonClick === false){
+
+        return(
+            <div className={styles.expenseInputTab}>
+            <ExpenseForm  
+                        newExpense = {props.newExpense}
+                        title = {props.title}
+                        amount = {props.amount}
+                        date = {props.date}
+                        submitTitle = {props.submitTitle} 
+                        submitAmount = {props.submitAmount} 
+                        submitDate ={props.submitDate} />
+            </div>
+        )
+                
+    }
+    
+        
+    
 }
 
 
 export default ExpenseInputTab
-
-
-//    <ExpenseForm 
-//                         newExpense = {props.newExpense}
-//                         title = {props.title}
-//                         amount = {props.amount}
-//                         date = {props.date}
-//                         submitTitle = {props.submitTitle} 
-//                         submitAmount = {props.submitAmount} 
-//                         submitDate ={props.submitDate} /> 
