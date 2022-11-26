@@ -7,13 +7,17 @@ import styles from './Chart.module.css';
 
 
 const Chart = (props) => {
+
+
+    
+
     return(
      
         <div>
             <div className= {styles.filter}>
                 <b className= {styles.text}> Filter by Year </b>
 
-                <select className={styles.option}>
+                <select defaultValue={2021} onChange = {props.yearChange} className={styles.option}>
                     <option> 2020 </option>
                     <option> 2021 </option>
                     <option> 2022 </option>
