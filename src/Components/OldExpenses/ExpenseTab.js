@@ -35,10 +35,14 @@ const ExpenseTab = (props) => {
 
     const yearChange = (event) => {
         setYear(event.target.value)
-        setFiltered(fullexpense.filter(e => e.date.getFullYear() === year))
     }
-    
-    const [filteredExpense, setFiltered] = useState(fullexpense.filter(e => e.date.getFullYear() === year))
+
+    console.log(fullexpense);
+
+    const filteredExpense = fullexpense.filter(e => e.date.getFullYear() === (year/1))
+
+    console.log(year);
+    console.log(filteredExpense);
     
     
 
