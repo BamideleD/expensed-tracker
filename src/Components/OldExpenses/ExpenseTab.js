@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import ExpenseItem from "./ExpenseItem";
 import styles from "./ExpenseTab.module.css"
 import Chart from './Chart'
@@ -25,6 +25,38 @@ const ExpenseTab = (props) => {
                         {month: 'Nov', key: 11},
                         {month: 'Dec', key: 12},
                            ]
+                           
+                           
+                           
+                           
+    
+
+    const [year, setYear] =useState(2021)
+
+    const yearChange = (event) => {
+        setYear(event.target.value)
+    }
+
+    console.log(fullexpense);
+
+    const filteredExpense = fullexpense.filter(e => e.date.getFullYear() === (year/1))
+
+    console.log(year);
+    console.log(filteredExpense);
+    
+    
+
+    
+    
+    
+
+    
+
+
+
+    
+
+    
     
     
     
@@ -33,9 +65,9 @@ const ExpenseTab = (props) => {
     return (
         <div className={styles.expenseTab}>
 
-            <Chart dataPoints = {dataPoints} key = {'i'} date = {props.date} />
+            <Chart dataPoints = {dataPoints} yearChange = {yearChange}/>
 
-            {fullexpense.map((e) => {
+            {filteredExpense.map((e) => {
                 return(
                 
                         <ExpenseItem id = {e.id} item = {e.item} amount = {e.amount} date = {e.date} key = {e.id}/>
