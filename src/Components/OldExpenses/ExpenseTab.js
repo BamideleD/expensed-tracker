@@ -37,12 +37,10 @@ const ExpenseTab = (props) => {
         setYear(event.target.value)
     }
 
-    console.log(fullexpense);
 
     const filteredExpense = fullexpense.filter(e => e.date.getFullYear() === (year/1))
 
-    console.log(year);
-    console.log(filteredExpense);
+
     
     
 
