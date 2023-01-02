@@ -12,18 +12,18 @@ const ExpenseTab = (props) => {
    const fullexpense = props.newExpensed
 
 
-   const dataPoints = [ {month: 'Jan', key: 1},
-                        {month: 'Feb', key: 2},
-                        {month: 'Mar', key: 3},
-                        {month: 'Apr', key: 4},
-                        {month: 'May', key: 5},
-                        {month: 'Jun', key: 6},
-                        {month: 'Jul', key: 7},
-                        {month: 'Aug', key: 8},
-                        {month: 'Sep', key: 9},
-                        {month: 'Oct', key: 10},
-                        {month: 'Nov', key: 11},
-                        {month: 'Dec', key: 12},
+   const dataPoints = [ {month: 'Jan', key: 0},
+                        {month: 'Feb', key: 0},
+                        {month: 'Mar', key: 0},
+                        {month: 'Apr', key: 0},
+                        {month: 'May', key: 0},
+                        {month: 'Jun', key: 0},
+                        {month: 'Jul', key: 0},
+                        {month: 'Aug', key: 0},
+                        {month: 'Sep', key: 0},
+                        {month: 'Oct', key: 0},
+                        {month: 'Nov', key: 0},
+                        {month: 'Dec', key: 0},
                            ]
                            
                            
@@ -40,7 +40,13 @@ const ExpenseTab = (props) => {
 
     const filteredExpense = fullexpense.filter(e => e.date.getFullYear() === (year/1))
 
+    console.log(filteredExpense);
 
+
+    for ( const expense of filteredExpense) {
+        const expenseMonth = expense.date.getMonth()
+        dataPoints[expenseMonth].key += expense.amount
+    }
     
     
 
@@ -63,7 +69,7 @@ const ExpenseTab = (props) => {
     return (
         <div className={styles.expenseTab}>
 
-            <Chart dataPoints = {dataPoints} yearChange = {yearChange}/>
+            <Chart dataPoints = {dataPoints} yearChange = {yearChange} expense = {filteredExpense}/>
 
             {filteredExpense.map((e) => {
                 return(
