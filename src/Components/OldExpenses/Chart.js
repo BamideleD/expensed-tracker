@@ -8,7 +8,16 @@ import styles from './Chart.module.css';
 
 const Chart = (props) => {
 
+    const dataValue = props.dataPoints.map((v) => v.key)
 
+    const max = Math.max(...dataValue)
+
+    console.log(max);
+    
+
+
+    
+    
     
 
     return(
@@ -26,8 +35,9 @@ const Chart = (props) => {
 
             </div>
             <div className= {styles.chart}>
-                {props.dataPoints.map (dataPoint => <ChartBar month = {dataPoint.month} key = {dataPoint.key}/>)}
+                {props.dataPoints.map (dataPoint => <ChartBar max = {max} value = {dataPoint.key} expense = {props.expense} month = {dataPoint.month} key = {dataPoint.month}/>)}
             </div>
+            
         </div>
 
     )

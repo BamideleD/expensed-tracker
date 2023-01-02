@@ -41,7 +41,7 @@ const App = () => {
     const eggShell = {
         id: Math.random(),
         item: title,
-        amount: amount,
+        amount: +amount,
         date: new Date(date)
     }
     
